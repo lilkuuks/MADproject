@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Buy Farm Produce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="index.css" rel="stylesheet"/>
+</head>
+<body class="font-sans bg-gray-100">
+    <header class="bg-green-600 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">AgriConnect Marketplace</h1>
+            <div class="flex items-center space-x-4">
+                <input type="text" placeholder="Search for products..." class="px-4 py-2 rounded-lg focus:outline-none">
+                <button class="bg-yellow-400 text-green-800 px-4 py-2 rounded-lg">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">Shop by Category</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                    <h3 class="font-bold mb-2">Fruits</h3>
+                    <img src="https://th.bing.com/th/id/OIP.bPhKrr7EasW-J4m7dChfRwHaEJ?w=273&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Fruits" class="mx-auto mb-2">
+                    <p class="text-gray-600">Fresh and organic fruits from local farms.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                    <h3 class="font-bold mb-2">Vegetables</h3>
+                    <img src="https://th.bing.com/th/id/OIP.EyifMCffTTHZ__mD21mvAQHaHa?w=160&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Vegetables" class="mx-auto mb-2">
+                    <p class="text-gray-600">Locally grown vegetables, fresh from the field.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                    <h3 class="font-bold mb-2">Grains</h3>
+                    <img src="https://th.bing.com/th/id/OIP.t6_EDaZjweAv8YBiVmYFOAHaHa?w=175&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Grains" class="mx-auto mb-2">
+                    <p class="text-gray-600">High-quality grains for all your cooking needs.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-4 text-center">
+                    <h3 class="font-bold mb-2">Dairy</h3>
+                    <img src="https://th.bing.com/th/id/OIP.Ae9k2G5dkpWMqYqw4PXnuAHaHa?w=201&h=201&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Dairy" class="mx-auto mb-2">
+                    <p class="text-gray-600">Fresh dairy products from local farms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.3qnbniT4NWcDDdHqlmVocwHaFj?w=251&h=187&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Product 1" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Organic Apples</h3>
+                        <p class="text-gray-600 mb-2">Freshly picked organic apples from local orchards.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">₹150 / kg</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" 
+                            onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.vT5kFz941zyonMfuhMye4AHaFu?w=246&h=190&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Product 2" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Fresh Tomatoes</h3>
+                        <p class="text-gray-600 mb-2">Juicy and ripe tomatoes, perfect for salads and cooking.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">₹50 / kg</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" 
+                            onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.C_C7kd8gH45tUrKagO-QBQHaHa?w=183&h=183&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Product 3" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Basmati Rice</h3>
+                        <p class="text-gray-600 mb-2">Premium quality basmati rice for your meals.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">₹2,800 / 50kg</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" 
+                            onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Item 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.z6xiZbXDT8D3mKyNKh1G1wHaKQ?w=202&h=280&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Product 4" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Organic Milk</h3>
+                        <p class="text-gray-600 mb-2">Fresh organic milk from local dairy farms.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">₹60 / liter</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" 
+                            onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.NAh4IyhEIJTdg53rhiw-kQHaFj?w=233&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Product 5" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Premium Wheat Grains</h3>
+                        <p class="text-gray-600 mb-2">Fresh organic and nutritiuos wheat grains from local dairy farms.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">₹60 / kilo</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" 
+                            onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md">
+                    <img src="https://th.bing.com/th/id/OIP.EkP0oGy9IdNGhqmmr7VpfAHaE7?w=300&h=200&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Product 6" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Premium Cotton</h3>
+                        <p class="text-gray-600 mb-2">Fresh premium cotton from local farms.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">₹5,500 / bale</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" 
+                            onclick="addToCart()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+function addToCart() {
+    let goToCart = confirm("✅ Added to cart!\n\nDo you want to view your cart now?");
+    if (goToCart) {
+        window.location.href = "delivery.html"; 
+    }
+}
+</script>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Farm Produce Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

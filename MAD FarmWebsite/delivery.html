@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Order Tracking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="delivery.css" rel="stylesheet"/>
+</head>
+<body class="min-h-screen flex justify-center items-center p-4 bg-green-50">
+    <div class="leaf-decoration leaf-1">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/94e2635d-0e46-4389-b40d-564548c35810.png" alt="Decorative green leaf silhouette illustration" />
+    </div>
+    
+    <div class="leaf-decoration leaf-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39872e6a-0d2a-4db4-8ecf-16dfd936d2c5.png" alt="Decorative green leaf silhouette illustration" />
+    </div>
+
+    <div class="login-container w-full max-w-md p-8">
+        <div class="flex flex-col items-center mb-8">
+            <div class="w-20 h-20 mb-4">
+                <img src="https://th.bing.com/th/id/OIP.uBFoxiBTc1uMQBD7dd4JSAHaHa?w=149&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="AgriConnect Farm logo featuring barn and wheat silhouette" />
+            </div>
+            <h1 class="text-3xl font-bold text-gray-800">Order Tracking</h1>
+            <p class="text-gray-600">View your purchases & delivery status</p>
+        </div>
+        
+        <div id="ordersContainer" class="space-y-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Recent Orders</h2>
+            </div>
+
+            <div class="order-card bg-white rounded-lg shadow p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="font-medium text-lg">Fresh Produce Box</h3>
+                        <p class="text-gray-500 text-sm">Order #HH-78945</p>
+                    </div>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">In Transit</span>
+                </div>
+                <div class="flex items-center mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ceceaa14-89b5-4d8c-a87c-caf670ad089b.png" alt="Assorted fresh vegetables" class="w-16 h-16 rounded-lg object-cover mr-4">
+                    <div>
+                        <p class="font-medium">Seasonal Organic Vegetables</p>
+                        <p class="text-gray-600 text-sm">Qty: 1 Box</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Estimated delivery</p>
+                        <p class="font-medium">September 15, 2025</p>
+                    </div>
+                    <button class="text-green-600 hover:underline">Track Order</button>
+                </div>
+            </div>
+
+            <div class="order-card bg-white rounded-lg shadow p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="font-medium text-lg">Farm Eggs</h3>
+                        <p class="text-gray-500 text-sm">Order #HH-78944</p>
+                    </div>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Delivered</span>
+                </div>
+                <div class="flex items-center mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a8c4c30c-7e42-40ef-993e-ab104b392778.png" alt="Brown farm fresh eggs" class="w-16 h-16 rounded-lg object-cover mr-4">
+                    <div>
+                        <p class="font-medium">Pasture-Raised Eggs</p>
+                        <p class="text-gray-600 text-sm">Qty: 2 Dozen</p>
+                    </div>
+                </div>
+                <button class="w-full mt-4 py-2 px-4 text-white font-semibold rounded-lg bg-green-600 hover:bg-green-700">
+                    Reorder
+                </button>
+            </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">
+                Need help with your order? <a href="#" class="font-medium text-green-600 hover:underline">Contact support</a>
+            </p>
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+            <p class="text-xs text-gray-500">
+                © 2025 AgriConnect. Secure farming starts here.
+            </p>
+        </div>
+    </div>
+
+ 
+</body>
+</html>
+

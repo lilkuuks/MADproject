@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect</title>
+    <link rel="stylesheet" href="farmerpage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-tractor"></i> AgriConnect</h1>
+            <p>Manage your crops and track sales efficiently</p>
+        </div>
+
+        <div id="alertContainer"></div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <i class="fas fa-seedling" style="color: #27ae60;"></i>
+                <h3 id="totalCrops">0</h3>
+                <p>Total Crops</p>
+            </div>
+            <div class="stat-box">
+                <i class=" -GHS-sign" style="color: #f39c12;"></i>
+                <h3 id="totalRevenue">GHS0</h3>
+                <p>Total Revenue</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-check-circle" style="color: #3498db;"></i>
+                <h3 id="soldCrops">0</h3>
+                <p>Sold Crops</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-chart-line" style="color: #e74c3c;"></i>
+                <h3 id="availableCrops">0</h3>
+                <p>Available Crops</p>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h2><i class="fas fa-plus-circle"></i> Add New Crop</h2>
+                <form id="cropForm">
+                    <div class="form-group">
+                        <label for="cropName">Crop Name *</label>
+                        <input type="text" id="cropName" required placeholder="e.g., Organic Tomatoes">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cropType">Crop Type *</label>
+                        <select id="cropType" required>
+                            <option value="">Select Type</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Grains">Grains</option>
+                            <option value="Legumes">Legumes</option>
+                            <option value="Herbs">Herbs</option>
+                            <option value="Dairy">Dairy Products</option>
+                            <option value="Meat">Meat & Poultry</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">Quantity *</label>
+                        <input type="number" id="quantity" required min="0.1" step="0.1" placeholder="e.g., 50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unit">Unit *</label>
+                        <select id="unit" required>
+                            <option value="">Select Unit</option>
+                            <option value="kg">Kilograms (kg)</option>
+                            <option value="lbs">Pounds (lbs)</option>
+                            <option value="pieces">Pieces</option>
+                            <option value="bundles">Bundles</option>
+                            <option value="dozen">Dozen</option>
+                            <option value="liters">Liters</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="price">Price per Unit (GHS) *</label>
+                        <input type="number" id="price" required min="0.01" step="0.01" placeholder="e.g., 2.50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quality">Quality Grade</label>
+                        <select id="quality">
+                            <option value="Premium">Premium</option>
+                            <option value="Grade A">Grade A</option>
+                            <option value="Grade B">Grade B</option>
+                            <option value="Standard">Standard</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="harvestDate">Harvest Date</label>
+                        <input type="date" id="harvestDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" rows="3" placeholder="Describe your crop quality, growing conditions, certifications, etc."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">
+                        <i class="fas fa-upload"></i> Upload Crop
+                    </button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-list"></i> Your Crops</h2>
+                <div class="crop-list" id="cropList">
+                    <div class="empty-state">
+                        <i class="fas fa-seedling"></i>
+                        <h3>No crops uploaded yet</h3>
+                        <p>Start by adding your first crop using the form on the left!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-chart-bar"></i> Sales Analytics</h2>
+            <div id="analytics">
+                <p>Analytics will appear here as you add and sell crops.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
