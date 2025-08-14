@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Farmer's Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/index.css" rel="stylesheet"/>
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('signup-modal');
+            modal.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <header class="gradient-bg text-white fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-tractor text-2xl"></i>
+                <h1 class="text-2xl font-bold">AgriConnect</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#marketplace" class="nav-item">Marketplace</a>
+                <a href="#upload" class="nav-item">Upload Crops</a>
+                <a href="#connect" class="nav-item">Connect</a>
+                <a href="#tips" class="nav-item">Farming Tips</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="pages/login.html" class="bg-white text-green-600 px-4 py-2 rounded-full font-medium hover:bg-green-50 transition">Login</a>
+                <a href="#" onclick="toggleModal()" class="bg-yellow-400 text-green-800 px-4 py-2 rounded-full font-medium hover:bg-yellow-300 transition">Sign Up</a>
+            </div>
+            <button class="md:hidden text-2xl" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <div id="signup-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg w-full max-w-md mx-4 p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Choose Your Role</h3>
+            <p class="text-gray-600 mb-6">Please select whether you are a Farmer or a Buyer:</p>
+            <div class="flex justify-between">
+                <a href="pages/farmersignup.html" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition font-medium">Farmer</a>
+                <a href="pages/signup.html" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-medium">Buyer</a>
+            </div>
+            <button onclick="toggleModal()" class="mt-4 text-gray-600 hover:text-gray-800 font-medium">Cancel</button>
+        </div>
+    </div>
+
+    <section id="home" class="pt-32 pb-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Empowering Farmers, Connecting Buyers</h1>
+                <p class="text-xl mb-8">The complete digital platform for modern agriculture - sell your produce directly, connect with buyers nationwide, and access expert farming advice.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="pages/market.html" class="border-2 border-white text-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-green-600 transition">
+                        Browse Marketplace <i class="ml-2 fas fa-store"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://www.bing.com/th/id/OIP.kD-Vz-O1jnj_H6QIkOwgewHaE8?w=245&h=211&c=8&rs=1&qlt=90&o=6&cb=thwsc4&dpr=1.5&pid=3.1&rm=2" alt="Happy farmer holding fresh vegetables in field at sunset with basket of produce" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-700 mb-2">10,000+</div>
+                    <div class="text-gray-700">Verified Farmers</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-700 mb-2">5,000+</div>
+                    <div class="text-gray-700">Active Buyers</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-700 mb-2">50,000+</div>
+                    <div class="text-gray-700">Monthly Transactions</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-700 mb-2">100+</div>
+                    <div class="text-gray-700">Agriculture Experts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="marketplace" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Featured Crops</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Browse freshly uploaded products from farmers across the country</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Crop Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md crop-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://th.bing.com/th/id/OIP.NAh4IyhEIJTdg53rhiw-kQHaFj?w=233&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Freshly harvested golden wheat in wooden baskets ready for market" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Organic</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1 text-gray-900">Premium Wheat Grains</h3>
+                        <p class="text-gray-700 text-sm mb-2">Location: Punjab</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">GHS 1,250 / quintal</span>
+                            <span class="text-sm text-gray-600">Harvest: Jun 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md crop-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://th.bing.com/th/id/OIP.vT5kFz941zyonMfuhMye4AHaFu?w=246&h=190&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Fresh ripe tomatoes organized in crates with green leaves still attached" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-yellow-400 text-gray-800 text-xs px-2 py-1 rounded-full">Best Seller</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Fresh Tomatoes</h3>
+                        <p class="text-gray-600 text-sm mb-2">Location: Ada</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">GHS 150 / kg</span>
+                            <span class="text-sm text-gray-500">Harvest: May 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md crop-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://th.bing.com/th/id/OIP.C_C7kd8gH45tUrKagO-QBQHaHa?w=183&h=183&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Cluster of fresh basmati rice bags with grains spilling out showcase quality" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Basmati Rice</h3>
+                        <p class="text-gray-600 text-sm mb-2">Location: Haryana</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600"> GHS2,800 / 50kg</span>
+                            <span class="text-sm text-gray-500">Harvest: Apr 2025</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md crop-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://th.bing.com/th/id/OIP.EkP0oGy9IdNGhqmmr7VpfAHaE7?w=300&h=200&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Freshly plucked cotton bolls piled high showing fluffy white texture" class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">Organic</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1">Premium Cotton</h3>
+                        <p class="text-gray-600 text-sm mb-2">Location: Gujarat</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-600">GHS 5,500 / bale</span>
+                            <span class="text-sm text-gray-500">Harvest: Mar 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button onclick="window.location.href='pages/market.html'" class="bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition">
+    View All Listings <i class="ml-2 fas fa-chevron-right"></i>
+</button>
+
+            </div>
+        </div>
+    </section>
+    <section id="upload" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Upload Your Crops</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Reach thousands of buyers nationwide with just a few taps</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://th.bing.com/th/id/OIP.EwpAze7wwmqj4Q4pBhk-RgHaE7?w=259&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Farmer using smartphone in field to upload crop information with agriculture fields in background" class="rounded-lg shadow-lg">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-green-50 p-6 rounded-lg border border-green-100">
+                        <h3 class="text-xl font-bold mb-4 text-green-700">Sell Your Produce in 3 Easy Steps</h3>
+                        <ol class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <span>1</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Create Your Listing</div>
+                                    <p class="text-sm text-gray-600">Add photos, description, quantity, and pricing details</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <span>2</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Set Quality Parameters</div>
+                                    <p class="text-sm text-gray-600">Define quality standards, certifications, and delivery options</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 bg-green-100 text-green-600 rounded-full w-8 h-8 flex items-center justify-center mr-3">
+                                    <span>3</span>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Publish & Connect</div>
+                                    <p class="text-sm text-gray-600">Get offers directly from verified buyers and negotiate deals</p>
+                                </div>
+                            </li>
+                        </ol>
+                        
+                        <button class="mt-8 w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition upload-btn"onclick="window.location.href='pages/farmerpage.html'">
+                        <i class="fas fa-cloud-upload-alt mr-2"></i> Start Uploading Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Connect With Buyers</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Our verified buyer network includes wholesalers, processors, exporters, and retailers</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-store-alt text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Retail Stores</h3>
+                    <p class="text-gray-600 mb-4">Connect directly with supermarket chains and local grocers</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-industry text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Processors</h3>
+                    <p class="text-gray-600 mb-4">Sell to food processing companies and manufacturers</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Exporters</h3>
+                    <p class="text-gray-600 mb-4">Access international markets through export companies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Expert Farming Tips</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Learn best practices from agricultural experts</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tip 1 -->
+                <div class="rounded-lg overflow-hidden shadow-md border border-gray-100">
+                    <img src="https://th.bing.com/th/id/OIP.jYXoQlUdewOCyJufuo4haQAAAA?w=284&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" alt="Farmer explaining soil testing techniques in field with digital measuring device" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-chalkboard-teacher text-green-600"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Posted by Dr. Rajesh Kumar</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Soil Health Management</h3>
+                        <p class="text
